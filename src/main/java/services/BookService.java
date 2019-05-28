@@ -9,11 +9,11 @@ public class BookService {
 
     private BookDao bookDao = new BookDao();
 
-    public Book findById(int id) throws SQLException, ClassNotFoundException {
+    public Book findById(int id) {
         return bookDao.getBookById(id);
     }
 
-    public void addBook(Book book) throws SQLException, ClassNotFoundException{
+    public void addBook(Book book) {
         bookDao.addBook(book);
     }
 }
