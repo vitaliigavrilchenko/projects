@@ -1,8 +1,26 @@
+package model;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class Book {
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
     private int pages;
     private String colour;
     private String author;
     private String name;
+
+    public Book() {
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public int getPages() {
         return pages;
@@ -34,5 +52,16 @@ public class Book {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", pages=" + pages +
+                ", colour='" + colour + '\'' +
+                ", author='" + author + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

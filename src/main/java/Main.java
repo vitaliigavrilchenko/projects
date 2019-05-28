@@ -1,19 +1,17 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import model.Book;
+import services.BookService;
 
 public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        DataBaseService dataBaseService = new DataBaseService();
+        BookService bookService = new BookService();
         Book book = new Book();
-        book.setName("namename22");
-        book.setColour("blackk");
-        book.setPages(327);
-        book.setAuthor("adrianrr");
-        dataBaseService.addBook(book);
+        book.setName("paparoach");
+        book.setColour("green");
+        book.setPages(3271);
+        book.setAuthor("julVern");
+        bookService.addBook(book);
 
     }
 
