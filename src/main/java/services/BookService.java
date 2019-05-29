@@ -3,8 +3,6 @@ package services;
 import dao.BookDao;
 import model.Book;
 
-import java.sql.SQLException;
-
 public class BookService {
 
     private BookDao bookDao = new BookDao();

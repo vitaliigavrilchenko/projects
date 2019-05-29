@@ -3,7 +3,7 @@ import services.BookService;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         BookService bookService = new BookService();
         Book book = new Book();
