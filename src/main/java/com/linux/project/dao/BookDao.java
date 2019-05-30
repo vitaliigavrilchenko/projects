@@ -1,9 +1,9 @@
-package dao;
+package com.linux.project.dao;
 
-import model.Book;
+import com.linux.project.model.Book;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import utils.HibernateSessionFactoryUtil;
+import com.linux.project.utils.HibernateSessionFactoryUtil;
 
 
 public class BookDao {

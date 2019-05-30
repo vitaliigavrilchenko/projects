@@ -1,6 +1,6 @@
-package utils;
+package com.linux.project.utils;
 
-import model.Book;
+import com.linux.project.model.Book;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;

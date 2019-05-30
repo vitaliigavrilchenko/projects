@@ -1,7 +1,7 @@
-package services;
+package com.linux.project.services;
 
-import dao.BookDao;
-import model.Book;
+import com.linux.project.dao.BookDao;
+import com.linux.project.model.Book;
 
 public class BookService {
 

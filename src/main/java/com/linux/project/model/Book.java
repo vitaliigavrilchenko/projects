@@ -1,4 +1,4 @@
-package model;
+package com.linux.project.model;
 
 import javax.persistence.*;
 
