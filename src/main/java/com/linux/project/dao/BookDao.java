@@ -4,8 +4,10 @@ import com.linux.project.model.Book;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import com.linux.project.utils.HibernateSessionFactoryUtil;
+import org.springframework.stereotype.Repository;
 
 
+@Repository
 public class BookDao {
 
 
