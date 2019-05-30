@@ -15,12 +15,12 @@ public class MainController {
     @RequestMapping("/name")
     @ResponseBody
     public String bookName() {
-        return bookService.findById(1).getName();
+        return bookService.findById(6).getName();
     }
 
     @RequestMapping("/colour")
     @ResponseBody
     public String bookColour() {
-        return bookService.findById(1).getColour();
+        return bookService.findById(6).getColour();
     }
 }
