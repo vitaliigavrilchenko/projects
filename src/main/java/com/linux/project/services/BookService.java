@@ -1,6 +1,6 @@
 package com.linux.project.services;
 
-import com.linux.project.dao.BookRepository;
+import com.linux.project.repositories.BookRepository;
 import com.linux.project.model.Book;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -31,9 +31,12 @@ public class MainController {
         bookService.addBook(new Book(333, "red", "zhenya", "bookname"));
         return "book added";
     }
+
     @RequestMapping("/count")
     @ResponseBody
-    public Long numberOfBooks(){
-       return bookService.getNumberOfBooks();
+    public Long numberOfBooks() {
+        return bookService.getNumberOfBooks();
     }
+
+
 }

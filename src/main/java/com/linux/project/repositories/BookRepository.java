@@ -1,4 +1,4 @@
-package com.linux.project.dao;
+package com.linux.project.repositories;
 
 import com.linux.project.model.Book;
 import org.springframework.data.repository.CrudRepository;
