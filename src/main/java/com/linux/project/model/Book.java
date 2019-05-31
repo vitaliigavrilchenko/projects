@@ -18,6 +18,13 @@ public class Book {
     public Book() {
     }
 
+    public Book(int pages, String colour, String author, String name) {
+        this.pages = pages;
+        this.colour = colour;
+        this.author = author;
+        this.name = name;
+    }
+
     public int getId() {
         return id;
     }
