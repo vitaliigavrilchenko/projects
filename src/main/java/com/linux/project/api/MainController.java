@@ -5,10 +5,7 @@ import com.linux.project.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class MainController {
@@ -27,23 +24,22 @@ public class MainController {
         return "bookinfo";
     }
 
-    @RequestMapping("/colour")
-    @ResponseBody
-    public String bookColour() {
-        return bookService.findById(2).getColour();
+
+    @GetMapping("/addbookform")
+    public String addBook (Model model){
+        model.addAttribute("book", new Book());
+        return "addbookform";
     }
 
-    @RequestMapping("/add")
-    @ResponseBody
-    public String addBook() {
-        bookService.addBook(new Book(333, "red", "zhenya", "bookname"));
-        return "book added";
+    @PostMapping("/index")
+    public String addBook(@ModelAttribute Book book) {
+        bookService.addBook(book);
+        return "index";
     }
 
-    @RequestMapping("/count")
-    @ResponseBody
-    public Long numberOfBooks() {
-        return bookService.getNumberOfBooks();
+    @GetMapping("/index")
+    public String startPage(){
+        return "index";
     }
 
 
