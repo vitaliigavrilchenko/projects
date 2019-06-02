@@ -4,6 +4,9 @@ import com.linux.project.model.Book;
 import com.linux.project.services.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -13,10 +16,15 @@ public class MainController {
     @Autowired
     private BookService bookService;
 
-    @RequestMapping("/name")
-    @ResponseBody
-    public String bookName() {
-        return bookService.findById(1).getName();
+    @GetMapping("/bookinfo/{id}")
+    public String bookName(@PathVariable("id") int id, Model model) {
+        Book book = bookService.findById(id);
+        model.addAttribute("id", id);
+        model.addAttribute("name", book.getName());
+        model.addAttribute("pages", book.getPages());
+        model.addAttribute("author", book.getAuthor());
+        model.addAttribute("colour", book.getColour());
+        return "bookinfo";
     }
 
     @RequestMapping("/colour")

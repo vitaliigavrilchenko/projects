@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>Таблица размеров обуви</title>
+</head>
+<body>
+<table border="1">
+    <caption>Book information</caption>
+    <tr>
+        <th>Book id</th>
+        <th>Book name</th>
+        <th>Number of pages</th>
+        <th>Book author</th>
+        <th>Book colour</th>
+    </tr>
+    <tr>
+        <td>
+            <p th:text="${id}"/>
+        </td>
+        <td>
+            <p th:text="${name}"/>
+        </td>
+        <td>
+            <p th:text="${pages}"/>
+        </td>
+        <td>
+            <p th:text="${author}"/>
+        </td>
+        <td>
+            <p th:text="${colour}"/>
+        </td>
+
+    </tr>
+
+</table>
+</body>
+</html>
